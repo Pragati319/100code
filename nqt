@@ -1,0 +1,31 @@
+/******************************************************************************
+Abundant and Harshad number problem
+*******************************************************************************/
+
+public class Main
+{
+    public static int factorial( int n ){
+        int sum=0;
+        for(int i = 1; i <=n/2; i++){
+            if(n%i == 0){
+                sum+=i;
+            }
+        }
+        return sum;
+    }
+	public static void main(String[] args) {
+		System.out.println("Abundant and Harshad number problem ");
+		int sum1=0, org = 1662,n, fact;
+		n = org;
+		while(org != 0 ){
+		    sum1 += org%10;
+		    org = org/10;
+		}
+		 fact = factorial(n);
+		String result = (fact>n)? "Abundant number" : "Not Abundant number";
+		String result2 = ((n%sum1)==0)? "Harshad number" : "Not Harshad number";
+		System.out.println(result);
+		System.out.println(result2);
+
+	}
+}
