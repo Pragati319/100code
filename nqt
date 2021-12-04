@@ -29,3 +29,29 @@ public class Main
 
 	}
 }
+/******************************************************************************
+FRIENDLY PAIR PROBLEM
+*******************************************************************************/
+
+public class Main
+{
+    public static int factor( int n ){
+        int sum=0;
+        for(int i = 1; i <=n/2; i++){
+            if(n%i == 0){
+                sum+=i;
+            }
+        }
+        return sum;
+    }
+	public static void main(String[] args) {
+		System.out.println("friendly pair problem ");
+        int n=5020 , m=5564, fact1, fact2; 		
+        fact1 = factor(n);
+        fact2 = factor(m);
+		String result = ((fact1==m)&&(fact2==n))? "friendly pair " : "Not a friendly pair ";
+		System.out.println(result);
+
+	}
+}
+
