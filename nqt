@@ -126,6 +126,30 @@ public class Main
     System.out.println (r);
   }
 }
+
+/******************************************************************************
+
+                          BINARY REPRESENTATION USING STACK
+
+*******************************************************************************/
+import java.util.*;
+public class Main
+{
+    static void  bin(int n){
+        Stack s = new Stack();
+        while (n!=0){
+            s.push(n%2);
+            n = n/2;   
+        }
+        while(s.empty() != true)
+        System.out.print(s.pop());
+    }
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		bin(7);
+	}
+}
+
   /*********************************************************/
   /*********************************************************/
   /*********************************************************/
