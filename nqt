@@ -151,6 +151,30 @@ public class Main
 }
 
   /*********************************************************/
+  /******************************************************************************
+
+                            REVERSING A String USING STACK
+
+*******************************************************************************/
+import java.util.*;
+public class Main
+{
+    static void  bin(String n){
+        Stack s = new Stack();
+        for(int  i = 0; i < n.length(); i++){
+            s.push(n.charAt(i));
+        }
+        while(s.empty() != true){
+        System.out.print(s.peek());
+           s.pop();
+        }
+    }
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		bin("pragati");
+	}
+}
+
   /*********************************************************/
   /*********************************************************/
   /*********************************************************/
