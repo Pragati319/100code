@@ -176,6 +176,84 @@ public class Main
 }
 
   /*********************************************************/
+  /***************************************************************************
+  			QUEUE IMPLEMENTATION  WITHOUT COLLECTIONS
+*******************************************************************************/
+import java.util.*;
+class Queues{
+    int front, rear;
+    int capacity;
+    int[] arr;
+    Queues(int n){
+        capacity = n;
+          front = -1;
+          rear = -1;
+        arr = new int[capacity];
+    }
+    boolean isFull(){
+        if(rear == capacity-1)
+        System.out.println("queue Overflow!!");
+        return (rear == capacity-1);
+    }
+    boolean isEmpty(){
+        if (front == -1 )
+        System.out.println("queue Underflow!!");
+        return (front ==-1);
+    }
+    void enqueue(int n){
+        if(isFull()==false){
+            if(front == -1)
+            front = 0;
+            rear++;
+            arr[rear] = n;
+        System.out.println(n+" Added to Queue");
+        }
+        
+    }
+    void  dequeue(){
+        if(isEmpty()==false){
+            int item = arr[front];
+            front++;
+        System.out.println(item+" Deleted from the queue");
+
+        }
+
+        
+    if(front>rear)
+    front = rear = -1;
+    }
+    int Front(){
+        if(isEmpty () )
+        return Integer.MIN_VALUE;
+        
+        return arr[front];
+    }
+    int Rear(){
+         if(isEmpty() )
+        return Integer.MIN_VALUE;
+        
+        return arr[rear];
+    }
+}
+
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		Queues q = new Queues(5);
+		q.enqueue(20);
+		q.enqueue(90);
+		q.enqueue(80);
+		q.enqueue(60);
+		q.dequeue();
+		q.dequeue();
+		q.enqueue(20);
+		q.enqueue(90);
+	System.out.println("Rear : "+q.Rear()+" \nFront : "+q.Front());
+
+	}
+}
+
   /*********************************************************/
   /*********************************************************/
   /*********************************************************/
