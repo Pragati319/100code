@@ -254,7 +254,41 @@ public class Main
 	}
 }
 
-  /*********************************************************/
+  /******************************************************************************                         
+Output :
+TW =130 FW=70
+
+Explanation:
+130+70 = 200 vehicles
+(70*4)+(130*2)= 540 wheels
+
+Constraints :
+2<=W
+W%2=0
+V<W
+
+Print “INVALID INPUT” , if inputs did not meet the constraints.
+The candidate has to write the code to accept two positive numbers separated by a new line.
+*******************************************************************************/
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    int w = sc.nextInt();
+	    int v = sc.nextInt();
+	    float x;
+	    x = (w - (2*v))/2;
+	    if((w<2)||(w%2!=0)||(v>w) )
+	    System.out.println("Invalid output");
+	    else{
+ 		System.out.println((int)x);
+ 		System.out.println((int)(v-x));}
+
+	}
+}
+
   /*********************************************************/
   /*********************************************************/
   /*********************************************************/
