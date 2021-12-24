@@ -317,7 +317,89 @@ public class Main
 	}
 }
 
-  /*********************************************************/
+  /******************************************************************************
+  Converting a matrix in a square matrix and finding the sum of diagonals 
+*******************************************************************************/
+class matrix
+{
+  void func (int[][]a, int m, int n)
+  {
+    int diff = 0;
+    int[][] array;
+      diff = m - n; 
+      if(diff!=0)
+   { if (diff > 0) // if true means coloum is lesser than row ,so the elements (1) are to be added in the coloum
+      {
+	array = new int[m][n + diff];
+	for (int i = 0; i < m; i++)
+	  {
+	    for (int j = 0; j < n + diff; j++)
+	      {
+		if (j < a[0].length)
+		  {
+		    array[i][j] = a[i][j];
+		    System.out.print (array[i][j] + " ");
+		  }
+		else
+		  {
+		    array[i][j] = 1;
+		    System.out.print (array[i][j] + " ");
+
+		  }
+	      }
+	  }
+
+      }
+    else  //means row is lesser than col ,so the elements (1) are to be added in the rows
+      {
+	diff = diff * (-1);
+	array = new int[m + diff][n];
+	for (int i = 0; i < m + diff; i++)
+	  {
+	    for (int j = 0; j < n; j++)
+	      {
+		if (i < a.length)
+		  {
+		    array[i][j] = a[i][j];
+		    System.out.print (array[i][j] + " ");
+		  }
+		else
+		  {
+		    array[i][j] = 1;
+		    System.out.print (array[i][j] + " ");
+
+		  }
+	      }
+	  }
+      }
+       sumOfdiagonals(array);
+   }else
+          sumOfdiagonals(a);
+
+  }
+  //function for calculating diagonal sum
+  void sumOfdiagonals(int[][]a){
+      int s1=0,s2=0,sum=0;
+      for(int i = 0 , j = a[0].length-1; j >= 0 && i<a.length; i++, j--){
+              s1 +=a[i][j];
+              s2 +=a[i][i];
+      }
+      sum = s1+s2;
+      System.out.println(sum);
+  }
+  }
+  public class Main
+  {
+    public static void main (String[]args)
+    {
+      System.out.println ("Hello World");
+      matrix m = new matrix ();
+      int[][] a = { {1, 2, 3, 4}, {1, 2, 3, 4}, {1, 2, 3, 4} };
+      int row = 3, col = 4;
+      m.func (a, row, col);
+    }
+  }
+
   /*********************************************************/
   /*********************************************************/
   /*********************************************************/
