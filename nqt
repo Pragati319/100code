@@ -401,7 +401,29 @@ class matrix
   }
 
   /*********************************************************/
+  Array rotation very simple no swap or interchanging is required simply print it in the order of rotation;
   /*********************************************************/
+  Scanner s = new Scanner(System.in);
+         int t = s.nextInt();
+        
+         for(int i = 0; i < t; i++){
+            int n = s.nextInt();
+           int[] arr = new int[n]; 
+          int   k = s.nextInt();
+            for(int j = 0; j<n; j++){
+               arr[j] = s.nextInt();
+            }
+            
+            //rotating 
+            for(int a = n-k ; a<n; a++){
+                System.out.print(arr[a]+" ");
+            }
+            for(int a = 0; a<n-k ; a++){
+                System.out.print(arr[a]+" ");
+            }
+           
+        }
+
   /*********************************************************/
   /*********************************************************/
   /*********************************************************/
