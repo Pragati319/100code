@@ -402,6 +402,7 @@ class matrix
 
   /*********************************************************/
   Array rotation very simple no swap or interchanging is required simply print it in the order of rotation;
+  if k > n then k%n is taken ;
   /*********************************************************/
   Scanner s = new Scanner(System.in);
          int t = s.nextInt();
