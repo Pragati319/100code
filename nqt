@@ -416,12 +416,14 @@ class matrix
             }
             
             //rotating 
-            for(int a = n-k ; a<n; a++){
+            int ind = n-(k%n);
+            for(int a = ind; a<n; a++){
                 System.out.print(arr[a]+" ");
             }
-            for(int a = 0; a<n-k ; a++){
+            for(int a = 0; a<ind ; a++){
                 System.out.print(arr[a]+" ");
             }
+           System.out.println();
            
         }
 
